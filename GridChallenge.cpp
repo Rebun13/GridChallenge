@@ -17,12 +17,10 @@ string gridChallenge(vector<string> grid) {
     int n = grid.size();
     for(int i = 0; i < n; i++) {
         sort(grid[i].begin(), grid[i].end());
-        cout << ":" << grid[i] << endl;
     }
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n-1; j++) 
             if(grid[j][i] > grid[j + 1][i]) {
-                cout << grid[j][i] << " > " << grid[j + 1][i] << endl;
                 return "NO";
             }
     return "YES";
